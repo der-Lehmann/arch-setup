@@ -5,3 +5,4 @@ set -e
 DIRECTORY="$HOME/.local/share/arch-setup"
 
 source $DIRECTORY/install/packages.sh
+source $DIRECTORY/install/display-manager.sh

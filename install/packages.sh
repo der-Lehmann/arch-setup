@@ -12,5 +12,7 @@ sudo pacman -Sy --noconfirm --needed \
     noto-fonts-emoji \
     qt5-wayland \
     qt6-wayland \
+    sddm \
+    waybar \
     wireplumber \
     xdg-desktop-portal-hyprland
