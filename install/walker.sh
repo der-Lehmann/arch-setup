@@ -10,34 +10,15 @@ sudo pacman -Sy --noconfirm --needed \
     protobuf \
     cairo \
     poppler-glib \
-    rust \
-    cargo \
-    go \
-    git \
-    make \
-    pkg-config
+    poppler
 
 echo "Installing Elephant..."
 if ! command -v elephant &> /dev/null; then
-    echo "Building Elephant from source..."
-    cd /tmp
-    git clone https://github.com/abenz1267/elephant.git
-    cd elephant
+    echo "Installing Elephant via yay..."
+    yay -S --noconfirm elephant
     
-    # Build and install the main binary
-    cd cmd/elephant
-    go install elephant.go
-    
-    # Create configuration directories
-    mkdir -p ~/.config/elephant/providers
-    
-    # Build and install desktop applications provider
-    cd ../internal/providers/desktopapplications
-    go build -buildmode=plugin
-    cp desktopapplications.so ~/.config/elephant/providers/
-    
-    cd /tmp
-    rm -rf elephant
+    echo "Installing Elephant providers..."
+    yay -S --noconfirm elephant-desktopapplications
     echo "Elephant installed successfully"
 else
     echo "Elephant is already installed"
@@ -46,14 +27,8 @@ fi
 # Install Walker
 echo "Installing Walker..."
 if ! command -v walker &> /dev/null; then
-    echo "Building Walker from source..."
-    cd /tmp
-    git clone https://github.com/abenz1267/walker.git
-    cd walker
-    cargo build --release
-    sudo cp target/release/walker /usr/local/bin/
-    cd ..
-    rm -rf walker
+    echo "Installing Walker via yay..."
+    yay -S --noconfirm walker
     echo "Walker installed successfully"
 else
     echo "Walker is already installed"
