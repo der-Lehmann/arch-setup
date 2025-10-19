@@ -12,32 +12,15 @@ sudo pacman -Sy --noconfirm --needed \
     poppler-glib \
     rust \
     cargo \
-    go \
-    git \
-    make \
     pkg-config
 
 echo "Installing Elephant..."
 if ! command -v elephant &> /dev/null; then
-    echo "Building Elephant from source..."
-    cd /tmp
-    git clone https://github.com/abenz1267/elephant.git
-    cd elephant
+    echo "Installing Elephant via yay..."
+    yay -S --noconfirm elephant
     
-    # Build and install the main binary
-    cd cmd/elephant
-    go install elephant.go
-    
-    # Create configuration directories
-    mkdir -p ~/.config/elephant/providers
-    
-    # Build and install desktop applications provider
-    cd ../internal/providers/desktopapplications
-    go build -buildmode=plugin
-    cp desktopapplications.so ~/.config/elephant/providers/
-    
-    cd /tmp
-    rm -rf elephant
+    echo "Installing Elephant providers..."
+    yay -S --noconfirm elephant-desktopapplications
     echo "Elephant installed successfully"
 else
     echo "Elephant is already installed"
