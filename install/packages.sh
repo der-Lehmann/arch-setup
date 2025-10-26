@@ -27,3 +27,5 @@ sudo pacman -Sy --noconfirm --needed \
     wireplumber \
     xdg-desktop-portal-gtk \
     xdg-desktop-portal-hyprland
+
+yay -S walker
