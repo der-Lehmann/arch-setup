@@ -1,20 +1,28 @@
 sudo pacman -Sy --noconfirm --needed \
     alacritty \
-    kitty \
     blueberry \
     brightnessctl \
     btop \
+    chromium \
     docker \
     dunst \
+    firefox \
     gnome-keyring \
     hyprland \
     hyprlock \
+    hyprpaper \
+    kitty \
+    less \
     noto-fonts \
     noto-fonts-emoji \
     pipewire \
+    polkit-gnome \
     qt5-wayland \
     qt6-wayland \
     sddm \
+    otf-font-awesome \
+    uwsm \
+    walker-bin \
     waybar \
     wireplumber \
     xdg-desktop-portal-gtk \
