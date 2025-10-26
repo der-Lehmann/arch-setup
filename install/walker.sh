@@ -10,7 +10,13 @@ sudo pacman -Sy --noconfirm --needed \
     protobuf \
     cairo \
     poppler-glib \
-    poppler
+    poppler \
+    rust \
+    cargo \
+    git \
+    pkg-config \
+    llvm \
+    clang
 
 echo "Installing Elephant..."
 if ! command -v elephant &> /dev/null; then
@@ -27,8 +33,14 @@ fi
 # Install Walker
 echo "Installing Walker..."
 if ! command -v walker &> /dev/null; then
-    echo "Installing Walker via yay..."
-    yay -S --noconfirm walker
+    echo "Building Walker from source..."
+    cd /tmp
+    git clone https://github.com/abenz1267/walker.git
+    cd walker
+    cargo build --release
+    sudo cp target/release/walker /usr/local/bin/
+    cd ..
+    rm -rf walker
     echo "Walker installed successfully"
 else
     echo "Walker is already installed"
