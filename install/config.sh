@@ -1,2 +1,2 @@
 mkdir -p ~/.config
-cp -R ~/.local/share/omarchy/config/* ~/.config/
+cp -R $DIRECTORY/config/* ~/.config/
