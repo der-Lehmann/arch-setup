@@ -3,6 +3,22 @@
 set -e
 echo "Installing Walker application launcher..."
 
+# Install Rust using rustup to ensure proper LLVM compatibility
+echo "Setting up Rust..."
+if ! command -v rustup &> /dev/null; then
+    echo "Installing rustup..."
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    source "$HOME/.cargo/env"
+    echo "Rust toolchain installed via rustup"
+else
+    echo "Rustup already installed"
+    source "$HOME/.cargo/env"
+fi
+
+# Install stable Rust toolchain
+rustup install stable
+rustup default stable
+
 echo "Installing dependencies..."
 sudo pacman -Sy --noconfirm --needed \
     gtk4 \
@@ -11,12 +27,9 @@ sudo pacman -Sy --noconfirm --needed \
     cairo \
     poppler-glib \
     poppler \
-    rust \
-    cargo \
     git \
     pkg-config \
-    llvm \
-    clang
+    curl
 
 echo "Installing Elephant..."
 if ! command -v elephant &> /dev/null; then
@@ -34,6 +47,7 @@ fi
 echo "Installing Walker..."
 if ! command -v walker &> /dev/null; then
     echo "Building Walker from source..."
+    source "$HOME/.cargo/env"
     cd /tmp
     git clone https://github.com/abenz1267/walker.git
     cd walker
