@@ -22,7 +22,6 @@ sudo pacman -Sy --noconfirm --needed \
     sddm \
     otf-font-awesome \
     uwsm \
-    walker-bin \
     waybar \
     wireplumber \
     xdg-desktop-portal-gtk \
