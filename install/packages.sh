@@ -13,6 +13,7 @@ sudo pacman -Sy --noconfirm --needed \
     hyprpaper \
     kitty \
     less \
+    man-db \
     noto-fonts \
     noto-fonts-emoji \
     pipewire \
@@ -22,9 +23,10 @@ sudo pacman -Sy --noconfirm --needed \
     sddm \
     otf-font-awesome \
     uwsm \
+    vim \
     waybar \
     wireplumber \
     xdg-desktop-portal-gtk \
     xdg-desktop-portal-hyprland
 
-yay -S walker
+yay -S --noconfirm walker
