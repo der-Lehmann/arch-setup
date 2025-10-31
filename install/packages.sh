@@ -6,14 +6,18 @@ sudo pacman -Sy --noconfirm --needed \
     chromium \
     docker \
     dunst \
+    ffmpegthumbnailer \
     firefox \
     gnome-keyring \
+    gvfs-mtp \
+    gvfs-smb \
     hyprland \
     hyprlock \
     hyprpaper \
     kitty \
     less \
     man-db \
+    nautilus \
     noto-fonts \
     noto-fonts-emoji \
     pipewire \
@@ -21,6 +25,7 @@ sudo pacman -Sy --noconfirm --needed \
     qt5-wayland \
     qt6-wayland \
     sddm \
+    sushi \
     otf-font-awesome \
     uwsm \
     vim \
