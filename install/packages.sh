@@ -8,6 +8,7 @@ sudo pacman -Sy --noconfirm --needed \
     dunst \
     ffmpegthumbnailer \
     firefox \
+    gnome-calculator \
     gnome-keyring \
     gvfs-mtp \
     gvfs-smb \
