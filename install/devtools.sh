@@ -1,8 +1,10 @@
-sudo pacman -Sy --noconfirm --needed \
-    docker \
-    docker-buildx \
-    docker-compose
+# zsh
+sudo pacman -Sy --noconfirm --needed zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
+# docker
+sudo pacman -Sy --noconfirm --needed docker docker-buildx docker-compose 
 sudo systemctl enable docker
 
 # tmux
