@@ -39,4 +39,4 @@ sudo pacman -Sy --noconfirm --needed \
     xdg-desktop-portal-gtk \
     xdg-desktop-portal-hyprland
 
-yay -S --noconfirm walker
+yay -S --noconfirm walker elephant elephant-desktopapplications
