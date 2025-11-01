@@ -15,6 +15,7 @@ sudo pacman -Sy --noconfirm --needed \
     hypridle \
     hyprlock \
     hyprpaper \
+    hyprsunset \
     kitty \
     less \
     man-db \
