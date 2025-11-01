@@ -30,6 +30,7 @@ sudo pacman -Sy --noconfirm --needed \
     qt6-wayland \
     sddm \
     sushi \
+    tmux \
     otf-font-awesome \
     uwsm \
     vim \
