@@ -12,6 +12,7 @@ sudo pacman -Sy --noconfirm --needed \
     gvfs-mtp \
     gvfs-smb \
     hyprland \
+    hypridle \
     hyprlock \
     hyprpaper \
     kitty \
