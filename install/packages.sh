@@ -36,6 +36,7 @@ sudo pacman -Sy --noconfirm --needed \
     vim \
     waybar \
     wireplumber \
+    wl-clipboard \
     xdg-desktop-portal-gtk \
     xdg-desktop-portal-hyprland
 
