@@ -28,6 +28,7 @@ sudo pacman -Sy --noconfirm --needed \
     polkit-gnome \
     qt5-wayland \
     qt6-wayland \
+    remmina \
     sddm \
     sushi \
     tmux \
@@ -40,4 +41,4 @@ sudo pacman -Sy --noconfirm --needed \
     xdg-desktop-portal-gtk \
     xdg-desktop-portal-hyprland
 
-yay -S --noconfirm walker elephant elephant-desktopapplications
+yay -S --noconfirm walker elephant elephant-desktopapplications brave-bin
