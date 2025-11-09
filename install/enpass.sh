@@ -17,7 +17,7 @@ cd "$TMPDIR"
 
 # Get the latest version from Enpass's repository
 echo "Fetching latest Enpass version..."
-LATEST_VERSION=$(curl -s https://apt.enpass.io/dists/stable/main/binary-amd64/Packages | grep -A 1 "^Package: enpass$" | grep "^Version:" | awk '{print $2}' | head -1)
+LATEST_VERSION=$(curl -s https://apt.enpass.io/dists/stable/main/binary-amd64/Packages | awk '/^Package: enpass$/{found=1} found && /^Version:/{print $2; exit}')
 
 if [ -z "$LATEST_VERSION" ]; then
     echo "Error: Could not determine latest Enpass version from repository"
