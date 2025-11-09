@@ -3,7 +3,8 @@ set -e
 
 git clone https://aur.archlinux.org/snapd.git
 cd snapd
-makepkg -si
+makepkg -s --noconfirm
+sudo pacman -U --noconfirm *.pkg.tar.zst
 
 sudo systemctl enable --now snapd.socket
 
