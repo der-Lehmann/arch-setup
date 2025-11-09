@@ -22,6 +22,7 @@ sudo pacman -Sy --noconfirm --needed \
     hyprsunset \
     kitty \
     less \
+    libreoffice-still \
     man-db \
     nautilus \
     noto-fonts \
@@ -32,11 +33,13 @@ sudo pacman -Sy --noconfirm --needed \
     qt6-wayland \
     remmina \
     sddm \
+    spotify \
     sushi \
     tmux \
     otf-font-awesome \
     uwsm \
     vim \
+    vlc \
     waybar \
     wget \
     wireplumber \
@@ -45,3 +48,7 @@ sudo pacman -Sy --noconfirm --needed \
     xdg-desktop-portal-hyprland
 
 yay -S --noconfirm walker elephant elephant-desktopapplications brave-bin
+
+sudo snap install todoist
+sudo snap install obsidian --classic
+sudo snap install localsend
