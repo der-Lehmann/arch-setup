@@ -4,7 +4,9 @@ sudo pacman -Sy --noconfirm --needed \
     brightnessctl \
     btop \
     chromium \
+    curl \
     docker \
+    dpkg \
     dunst \
     ffmpegthumbnailer \
     firefox \
@@ -36,6 +38,7 @@ sudo pacman -Sy --noconfirm --needed \
     uwsm \
     vim \
     waybar \
+    wget \
     wireplumber \
     wl-clipboard \
     xdg-desktop-portal-gtk \
