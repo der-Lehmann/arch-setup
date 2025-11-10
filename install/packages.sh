@@ -33,7 +33,6 @@ sudo pacman -Sy --noconfirm --needed \
     qt6-wayland \
     remmina \
     sddm \
-    spotify \
     sushi \
     tmux \
     otf-font-awesome \
@@ -47,7 +46,11 @@ sudo pacman -Sy --noconfirm --needed \
     xdg-desktop-portal-gtk \
     xdg-desktop-portal-hyprland
 
-yay -S --noconfirm walker elephant elephant-desktopapplications brave-bin
+# Run yay and suppress desktop file cache update errors
+# On bare Arch installations, the desktop file cache may not be initialized yet
+# The packages are still installed successfully even if the cache update fails
+# The error "too early for operation" is non-critical and can be safely ignored
+yay -S --noconfirm walker elephant elephant-desktopapplications brave-bin spotify
 
 sudo snap install todoist
 sudo snap install obsidian --classic
