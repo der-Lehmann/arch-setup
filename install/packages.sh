@@ -32,10 +32,10 @@ sudo pacman -Sy --noconfirm --needed \
     qt5-wayland \
     qt6-wayland \
     remmina \
-    sddm \
     sushi \
     tmux \
     otf-font-awesome \
+    unzip \
     uwsm \
     vim \
     vlc \

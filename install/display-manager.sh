@@ -2,6 +2,7 @@
 
 # Set up SDDM display manager for graphical login
 echo "Setting up SDDM display manager..."
+sudo pacman -Sy --needed --noconfirm sddm
 sudo mkdir -p /etc/sddm.conf.d
 
 if [ ! -f /etc/sddm.conf.d/autologin.conf ]; then
