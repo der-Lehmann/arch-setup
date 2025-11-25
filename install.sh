@@ -17,6 +17,8 @@ source $DIRECTORY/install/webapps.sh
 source $DIRECTORY/install/enpass.sh
 source $DIRECTORY/install/vscode.sh
 
+source $DIRECTORY/install/services.sh
+
 source $DIRECTORY/install/config.sh
 
 chsh -s $(which zsh)

@@ -22,6 +22,7 @@ mkdir -p ~/.config/tmux/plugins/catppuccin
 git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
 
 # php
+sudo pacman -Sy --noconfirm --needed php php-fpm php-gd php-intl php-mysql php-pgsql
 sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 sudo php composer-setup.php --quiet && sudo mv composer.phar /usr/local/bin/composer
 sudo rm composer-setup.php
@@ -36,4 +37,4 @@ nvm install node
 curl -fsSL https://pyenv.run | bash
 
 # pynev-virtualenv
-git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+git clone https://github.com/pyenv/pyenv-virtualenv.git $HOME/.pyenv/plugins/pyenv-virtualenv

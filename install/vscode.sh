@@ -1,5 +1,5 @@
 echo "Installing VSCode..."
-sudo pacman -S --noconfirm --needed visual-studio-code-bin
+yay -S visual-studio-code-bin
 
 mkdir -p ~/.vscode ~/.config/Code/User
 

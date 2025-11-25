@@ -8,6 +8,7 @@ sudo pacman -Sy --noconfirm --needed \
     docker \
     dpkg \
     dunst \
+    evince \
     ffmpegthumbnailer \
     firefox \
     gnome-calculator \
@@ -20,10 +21,14 @@ sudo pacman -Sy --noconfirm --needed \
     hyprpaper \
     hyprpicker \
     hyprsunset \
+    impala \
+    imv \
+    iwd \
     kitty \
     less \
     libreoffice-still \
     man-db \
+    mpv \
     nautilus \
     noto-fonts \
     noto-fonts-emoji \
@@ -46,10 +51,6 @@ sudo pacman -Sy --noconfirm --needed \
     xdg-desktop-portal-gtk \
     xdg-desktop-portal-hyprland
 
-# Run yay and suppress desktop file cache update errors
-# On bare Arch installations, the desktop file cache may not be initialized yet
-# The packages are still installed successfully even if the cache update fails
-# The error "too early for operation" is non-critical and can be safely ignored
 yay -S --noconfirm walker elephant elephant-desktopapplications brave-bin spotify
 
 sudo snap install todoist
