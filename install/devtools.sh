@@ -35,6 +35,3 @@ nvm install node
 
 # pynev
 curl -fsSL https://pyenv.run | bash
-
-# pynev-virtualenv
-git clone https://github.com/pyenv/pyenv-virtualenv.git $HOME/.pyenv/plugins/pyenv-virtualenv
