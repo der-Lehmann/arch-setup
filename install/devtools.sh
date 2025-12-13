@@ -22,7 +22,7 @@ mkdir -p ~/.config/tmux/plugins/catppuccin
 git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
 
 # php
-sudo pacman -Sy --noconfirm --needed php php-fpm php-gd php-intl php-mysql php-pgsql
+sudo pacman -Sy --noconfirm --needed php
 sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 sudo php composer-setup.php --quiet && sudo mv composer.phar /usr/local/bin/composer
 sudo rm composer-setup.php
