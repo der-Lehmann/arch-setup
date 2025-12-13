@@ -52,7 +52,3 @@ sudo pacman -Sy --noconfirm --needed \
     xdg-desktop-portal-hyprland
 
 yay -S --noconfirm walker elephant elephant-desktopapplications brave-bin spotify
-
-sudo snap install todoist
-sudo snap install obsidian --classic
-sudo snap install localsend
