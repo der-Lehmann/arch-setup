@@ -5,7 +5,9 @@ set -e
 DIRECTORY="$HOME/.local/share/arch-setup"
 export DIRECTORY
 
-sudo pacman -Syu
+sudo -v
+
+sudo pacman -Syu --noconfirm
 
 source $DIRECTORY/install/yay.sh
 source $DIRECTORY/install/display-manager.sh
