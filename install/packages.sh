@@ -1,6 +1,5 @@
 sudo pacman -Sy --noconfirm --needed \
     alacritty \
-    blueberry \
     brightnessctl \
     btop \
     chromium \
@@ -51,4 +50,4 @@ sudo pacman -Sy --noconfirm --needed \
     xdg-desktop-portal-gtk \
     xdg-desktop-portal-hyprland
 
-yay -S --noconfirm walker elephant elephant-desktopapplications brave-bin spotify
+yay -S --noconfirm blueberry walker elephant elephant-desktopapplications brave-bin spotify
