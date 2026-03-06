@@ -15,6 +15,15 @@ sudo systemctl enable --now snapd.apparmor.service
 
 sudo ln -sf /var/lib/snapd/snap /snap
 
+# Wait for snapd to finish initial seeding before installing snaps
+echo "Waiting for snapd to be ready..."
+for i in {1..30}; do
+  if snap list >/dev/null 2>&1; then
+    break
+  fi
+  sleep 2
+done
+
 cd /
 rm -rf "$TMPDIR"
 
