@@ -1,5 +1,5 @@
 echo "Installing VSCode..."
-yay -S visual-studio-code-bin
+yay -S --noconfirm visual-studio-code-bin
 
 mkdir -p ~/.vscode ~/.config/Code/User
 
