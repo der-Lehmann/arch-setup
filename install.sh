@@ -8,6 +8,7 @@ export DIRECTORY
 sudo -v
 
 sudo pacman -Syu --noconfirm
+sudo pacman -S --needed --noconfirm base-devel
 
 source $DIRECTORY/install/yay.sh
 source $DIRECTORY/install/display-manager.sh
