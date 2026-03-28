@@ -18,6 +18,7 @@ source $DIRECTORY/install/devtools.sh
 source $DIRECTORY/install/webapps.sh
 source $DIRECTORY/install/enpass.sh
 source $DIRECTORY/install/vscode.sh
+source $DIRECTORY/install/cursor.sh
 
 source $DIRECTORY/install/services.sh
 
