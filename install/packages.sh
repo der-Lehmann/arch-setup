@@ -12,6 +12,7 @@ sudo pacman -Sy --noconfirm --needed \
     firefox \
     gnome-calculator \
     gnome-keyring \
+    grim \
     gvfs-mtp \
     gvfs-smb \
     hyprland \
@@ -36,6 +37,8 @@ sudo pacman -Sy --noconfirm --needed \
     qt5-wayland \
     qt6-wayland \
     remmina \
+    satty \
+    slurp \
     sushi \
     tmux \
     otf-font-awesome \
