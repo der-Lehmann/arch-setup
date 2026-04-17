@@ -32,6 +32,7 @@ sudo pacman -Sy --noconfirm --needed \
     nautilus \
     noto-fonts \
     noto-fonts-emoji \
+    nwg-displays \
     pipewire \
     polkit-gnome \
     qt5-wayland \
