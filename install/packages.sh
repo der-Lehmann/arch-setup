@@ -20,7 +20,6 @@ sudo pacman -Sy --noconfirm --needed \
     hyprpaper \
     hyprpicker \
     hyprsunset \
-    impala \
     imv \
     iwd \
     kitty \
@@ -30,6 +29,9 @@ sudo pacman -Sy --noconfirm --needed \
     man-db \
     mpv \
     nautilus \
+    networkmanager \
+    network-manager-applet \
+    nm-connection-editor \
     noto-fonts \
     noto-fonts-emoji \
     nwg-displays \
