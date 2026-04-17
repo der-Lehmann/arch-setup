@@ -25,6 +25,7 @@ sudo pacman -Sy --noconfirm --needed \
     imv \
     iwd \
     kitty \
+    kooha \
     less \
     libreoffice-still \
     man-db \
