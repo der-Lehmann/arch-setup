@@ -1,0 +1,115 @@
+# ------------------------------------------------------------------
+# Dunst – Nord-ish theme matching waybar/hyprland styling
+# See: https://github.com/dunst-project/dunst/blob/master/dunstrc
+# ------------------------------------------------------------------
+
+[global]
+    monitor = 0
+    follow = mouse
+
+    width = (280, 420)
+    height = (0, 180)
+    origin = top-right
+    offset = (16, 16)
+    notification_limit = 5
+
+    progress_bar = true
+    progress_bar_height = 8
+    progress_bar_frame_width = 0
+    progress_bar_min_width = 200
+    progress_bar_max_width = 380
+    progress_bar_corner_radius = 4
+    progress_bar_corners = all
+
+    indicate_hidden = yes
+    transparency = 10
+    separator_height = 6
+    padding = 14
+    horizontal_padding = 16
+    text_icon_padding = 12
+    frame_width = 1
+    frame_color = "#88c0d0"
+    gap_size = 6
+    separator_color = frame
+    sort = yes
+    idle_threshold = 120
+
+    font = JetBrainsMono Nerd Font 10
+    line_height = 2
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+
+    enable_recursive_icon_lookup = true
+    icon_theme = "Papirus-Dark,Adwaita"
+    icon_position = left
+    min_icon_size = 24
+    max_icon_size = 48
+
+    sticky_history = yes
+    history_length = 40
+
+    dmenu = /usr/bin/dmenu -p dunst:
+    browser = /usr/bin/xdg-open
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+    corner_radius = 12
+    corners = all
+    ignore_dbusclose = false
+
+    force_xwayland = false
+    force_xinerama = false
+
+    mouse_left_click = do_action, close_current
+    mouse_middle_click = close_all
+    mouse_right_click = close_current
+
+[experimental]
+    per_monitor_dpi = false
+
+[urgency_low]
+    background = "#14161ef2"
+    foreground = "#d8dee9"
+    frame_color = "#4c566a"
+    timeout = 5
+    default_icon =
+
+[urgency_normal]
+    background = "#14161ef2"
+    foreground = "#e5e9f0"
+    frame_color = "#88c0d0"
+    timeout = 8
+    default_icon =
+
+[urgency_critical]
+    background = "#14161ef7"
+    foreground = "#eceff4"
+    frame_color = "#bf616a"
+    timeout = 0
+    default_icon =
+
+# ----- Application-specific tweaks --------------------------------
+[spotify]
+    appname = "Spotify"
+    format = "<b>%s</b>\n<i>%b</i>"
+    frame_color = "#a3be8c"
+
+[volume]
+    summary = "Volume*"
+    format = "<b>%s</b>\n%b"
+    frame_color = "#88c0d0"
+    timeout = 2
+
+[brightness]
+    summary = "Brightness*"
+    format = "<b>%s</b>\n%b"
+    frame_color = "#ebcb8b"
+    timeout = 2

@@ -43,6 +43,7 @@ sudo pacman -Sy --noconfirm --needed \
     sushi \
     tmux \
     otf-font-awesome \
+    papirus-icon-theme \
     unzip \
     uwsm \
     vim \
