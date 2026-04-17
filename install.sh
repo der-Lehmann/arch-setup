@@ -22,6 +22,8 @@ source $DIRECTORY/install/cursor.sh
 
 source $DIRECTORY/install/services.sh
 
+source $DIRECTORY/install/locale.sh
+
 source $DIRECTORY/install/config.sh
 
 source $DIRECTORY/install/snap.sh
