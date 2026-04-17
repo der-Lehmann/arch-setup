@@ -4,7 +4,6 @@ sudo pacman -Sy --noconfirm --needed \
     btop \
     chromium \
     curl \
-    docker \
     dpkg \
     dunst \
     evince \
