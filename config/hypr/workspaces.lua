@@ -1,0 +1,2 @@
+-- Managed by nwg-displays - will be overwritten when you apply settings.
+-- See https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
