@@ -11,6 +11,7 @@ hl.bind(mainMod .. " + SHIFT + Escape", hl.dsp.exec_cmd("hyprlock"))
 -- uwsm: prefer uwsm stop over hl.dsp.exit() for a clean session shutdown
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("uwsm stop"))
 hl.bind(mainMod .. " + SHIFT + SPACE", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo()) -- dwindle
 hl.bind(mainMod .. " + E", hl.dsp.layout("togglesplit")) -- dwindle
