@@ -20,6 +20,10 @@ hl.bind(mainMod .. " + E", hl.dsp.layout("togglesplit")) -- dwindle
 hl.bind(mainMod .. " + W", hl.dsp.group.toggle())
 hl.bind(mainMod .. " + Tab", hl.dsp.group.next())
 hl.bind(mainMod .. " + SHIFT + Tab", hl.dsp.group.prev())
+hl.bind(mainMod .. " + CTRL + H", hl.dsp.window.move({ into_or_create_group = "l" }))
+hl.bind(mainMod .. " + CTRL + L", hl.dsp.window.move({ into_or_create_group = "r" }))
+hl.bind(mainMod .. " + CTRL + K", hl.dsp.window.move({ into_or_create_group = "u" }))
+hl.bind(mainMod .. " + CTRL + J", hl.dsp.window.move({ into_or_create_group = "d" }))
 
 -- Move focus with mainMod + vim keys
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "l" }))
