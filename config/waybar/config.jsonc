@@ -19,8 +19,8 @@
   },
 
   "clock#time": {
-    "interval": 60,
-    "format": "{:%H:%M}",
+    "interval": 1,
+    "format": "{:%H:%M:%S}",
     "tooltip": false,
   },
 
