@@ -9,6 +9,7 @@ sudo pacman -Sy --noconfirm --needed \
     evince \
     ffmpegthumbnailer \
     firefox \
+    freerdp \
     gnome-calculator \
     gnome-keyring \
     grim \
