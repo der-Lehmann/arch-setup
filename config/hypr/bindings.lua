@@ -1,7 +1,8 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Binds/
 
 local terminal = "uwsm app -- alacritty"
-local menu = "uwsm app -- walker"
+-- Instant when walker --gapplication-service is running (see autostart.lua)
+local menu = "walker"
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
