@@ -92,6 +92,13 @@ hl.config({
     animations = {
         enabled = true,
     },
+
+    group = {
+        groupbar = {
+            font_size = 12,
+            height = 20,
+        },
+    },
 })
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
