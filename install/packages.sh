@@ -23,6 +23,7 @@ sudo pacman -Sy --noconfirm --needed \
     hyprsunset \
     imv \
     iwd \
+    keyd \
     kitty \
     kooha \
     less \

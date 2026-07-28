@@ -171,7 +171,7 @@ hl.config({
         kb_layout = "de",
         kb_variant = "nodeadkeys",
         kb_model = "",
-        kb_options = "lv3:caps_switch",
+        kb_options = "",
         kb_rules = "",
 
         follow_mouse = 1,
