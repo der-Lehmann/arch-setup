@@ -43,6 +43,7 @@ sudo pacman -Sy --noconfirm --needed \
     qt6-wayland \
     remmina \
     satty \
+    seahorse \
     slurp \
     sushi \
     tmux \
