@@ -27,21 +27,24 @@ window#waybar.hidden {
 }
 
 /* ---- Module container baseline --------------------------------- */
-#workspaces, #tray {
+#workspaces {
   margin-left: 5px;
+}
+
+#tray {
   margin-right: 5px;
 }
 
 #workspaces,
 #clock.time,
 #clock.date,
-#network,
+#custom-ip,
 #bluetooth,
 #battery,
 #tray {
   background-color: rgba(46, 52, 64, 0.4);
   color: #e5e9f0;
-  padding: 3px 12px;
+  padding: 3px 8px;
   margin-top: 4px;
   margin-bottom: 4px;
   border-radius: 4px;
@@ -91,18 +94,9 @@ window#waybar.hidden {
   color: #eceff4;
 }
 
-/* ---- Network --------------------------------------------------- */
-#network {
+/* ---- IP address ------------------------------------------------ */
+#custom-ip {
   color: #a3be8c;
-}
-
-#network.ethernet {
-  color: #88c0d0;
-}
-
-#network.disconnected,
-#network.disabled {
-  color: #bf616a;
 }
 
 /* ---- Bluetooth ------------------------------------------------- */

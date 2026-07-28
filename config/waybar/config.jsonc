@@ -10,7 +10,7 @@
 
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock#time", "clock#date"],
-  "modules-right": ["bluetooth", "network", "battery", "tray"],
+  "modules-right": ["bluetooth", "custom/ip", "battery", "tray"],
 
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -61,15 +61,11 @@
     "on-click": "blueman-manager",
   },
 
-  "network": {
-    "interval": 5,
-    "format-wifi": "  {signalStrength}%",
-    "format-ethernet": "󰈀  LAN",
-    "format-linked": "󰈂  {ifname}",
-    "format-disconnected": "󰖪  Offline",
-    "tooltip-format-wifi": "{essid}\n{ipaddr}/{cidr}\n{signalStrength}% • {frequency} MHz",
-    "tooltip-format-ethernet": "{ifname}\n{ipaddr}/{cidr}",
-    "tooltip-format-disconnected": "No network connection",
+  "custom/ip": {
+    "exec": "ip -4 -o addr show scope global | awk '{print $4}' | cut -d/ -f1 | head -n1",
+    "interval": 10,
+    "format": "{}",
+    "tooltip": false,
   },
 
   "battery": {
@@ -78,10 +74,10 @@
       "warning": 30,
       "critical": 15,
     },
-    "format": "{icon}  {capacity}%",
-    "format-charging": "󰂄  {capacity}%",
-    "format-plugged": "󰚥  {capacity}%",
-    "format-full": "󰁹  {capacity}%",
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰚥 {capacity}%",
+    "format-full": "󰁹 {capacity}%",
     "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
     "tooltip-format": "{timeTo}\n{power}W",
   },
