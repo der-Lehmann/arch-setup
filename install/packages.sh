@@ -48,6 +48,7 @@ sudo pacman -Sy --noconfirm --needed \
     tmux \
     otf-font-awesome \
     papirus-icon-theme \
+    pavucontrol \
     unzip \
     uwsm \
     vim \
