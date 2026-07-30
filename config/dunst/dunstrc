@@ -108,6 +108,12 @@
     frame_color = "#88c0d0"
     timeout = 2
 
+[microphone]
+    summary = "Microphone*"
+    format = "<b>%s</b>\n%b"
+    frame_color = "#88c0d0"
+    timeout = 2
+
 [brightness]
     summary = "Brightness*"
     format = "<b>%s</b>\n%b"

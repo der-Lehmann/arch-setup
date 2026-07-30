@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+# Adjust display brightness and show a dunst OSD
+
+set -euo pipefail
+
+step="${1:-}"
+
+usage() {
+  echo "Usage: brightness <+N%|N%-|N%>" >&2
+  exit 1
+}
+
+[[ -n $step ]] || usage
+
+brightness_percent() {
+  brightnessctl -m | awk -F, '{ gsub("%", "", $4); print $4 }'
+}
+
+notify_brightness() {
+  local percent icon
+  percent="$(brightness_percent)"
+
+  if ((percent <= 30)); then
+    icon="display-brightness-low-symbolic"
+  elif ((percent <= 70)); then
+    icon="display-brightness-medium-symbolic"
+  else
+    icon="display-brightness-high-symbolic"
+  fi
+
+  dunstify \
+    -a "brightness" \
+    -u low \
+    -i "$icon" \
+    -h string:x-canonical-private-synchronous:brightness \
+    -h int:value:"$percent" \
+    "Brightness" \
+    "${percent}%"
+}
+
+current="$(brightness_percent)"
+if [[ $step == "+10%" ]]; then
+  if ((current < 5)); then
+    target=$((current + 1))
+  elif ((current < 10)); then
+    target=$((current + 5))
+  else
+    target=$((current + 10))
+  fi
+  ((target > 100)) && target=100
+  step="${target}%"
+elif [[ $step == "10%-" ]]; then
+  if ((current <= 5)); then
+    target=$((current - 1))
+  elif ((current <= 10)); then
+    target=$((current - 5))
+  else
+    target=$((current - 10))
+  fi
+  ((target < 0)) && target=0
+  step="${target}%"
+fi
+
+# Absolute targets above are linear percentages from brightnessctl -m.
+# Do not pass -e/--exponent here: that curve would reinterpret the same
+# number as an exponential percent and crush brightness toward zero.
+brightnessctl set "$step" >/dev/null
+notify_brightness
