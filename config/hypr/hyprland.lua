@@ -269,6 +269,36 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name = "workspace-cursor",
+    match = { class = "^(?i)cursor$" },
+    workspace = "3",
+})
+
+hl.window_rule({
+    name = "workspace-vscode",
+    match = { class = "^(?i)code(-oss)?$" },
+    workspace = "3",
+})
+
+hl.window_rule({
+    name = "workspace-datagrip",
+    match = { class = "^(?i)jetbrains-datagrip$" },
+    workspace = "4",
+})
+
+hl.window_rule({
+    name = "workspace-obsidian",
+    match = { class = "^(?i)(md\\.)?obsidian$" },
+    workspace = "5",
+})
+
+hl.window_rule({
+    name = "workspace-todoist",
+    match = { class = "^(?i).*todoist.*$" },
+    workspace = "5",
+})
+
+hl.window_rule({
     name = "workspace-outlook",
     match = { class = "^(?i).*outlook.*$" },
     workspace = "6",
@@ -295,5 +325,11 @@ hl.window_rule({
 hl.window_rule({
     name = "workspace-bluetooth",
     match = { initial_title = "Bluetooth" },
+    workspace = "9",
+})
+
+hl.window_rule({
+    name = "workspace-spotify",
+    match = { class = "^(?i)spotify$" },
     workspace = "9",
 })
