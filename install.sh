@@ -23,6 +23,7 @@ source $DIRECTORY/install/cursor.sh
 
 source $DIRECTORY/install/networkmanager.sh
 source $DIRECTORY/install/services.sh
+source $DIRECTORY/install/firewall.sh
 
 source $DIRECTORY/install/locale.sh
 

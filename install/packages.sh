@@ -50,6 +50,7 @@ sudo pacman -Sy --noconfirm --needed \
     otf-font-awesome \
     papirus-icon-theme \
     pavucontrol \
+    ufw \
     unzip \
     uwsm \
     vim \
