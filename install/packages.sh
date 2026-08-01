@@ -7,6 +7,7 @@ sudo pacman -Sy --noconfirm --needed \
     dpkg \
     dunst \
     evince \
+    fastfetch \
     ffmpegthumbnailer \
     firefox \
     freerdp \
