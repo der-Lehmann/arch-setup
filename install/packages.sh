@@ -21,7 +21,6 @@ sudo pacman -Sy --noconfirm --needed \
     hyprlock \
     hyprpaper \
     hyprpicker \
-    hyprsunset \
     imv \
     iwd \
     keyd \
