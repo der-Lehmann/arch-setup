@@ -5,6 +5,8 @@ require("autostart")
 -- Managed by nwg-displays (creates the files if they don't exist yet)
 require("monitors")
 require("workspaces")
+-- Turns the internal screen back on when the last external monitor is unplugged
+require("monitor-hotplug")
 
 ------------------
 ---- MONITORS ----
