@@ -56,3 +56,32 @@ hl.on("monitor.added", function(added)
         hl.exec_cmd("hyprctl reload")
     end
 end)
+
+-- ThinkPad display key (Fn+F7): toggle the internal display on/off.
+-- hl.get_monitors() only lists enabled monitors, so absence means "off".
+hl.bind("XF86Display", function()
+    local internal_on = false
+    local externals = 0
+    for _, mon in ipairs(hl.get_monitors()) do
+        if is_internal(mon.name) then
+            internal_on = true
+        else
+            externals = externals + 1
+        end
+    end
+
+    if internal_on then
+        -- Never disable the only active display
+        if externals > 0 then
+            hl.monitor({ output = INTERNAL, disabled = true })
+        end
+    else
+        hl.monitor({
+            output = INTERNAL,
+            mode = "preferred",
+            position = "auto",
+            scale = "auto",
+            disabled = false,
+        })
+    end
+end, { locked = true })
