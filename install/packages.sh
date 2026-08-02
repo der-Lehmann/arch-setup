@@ -38,7 +38,10 @@ sudo pacman -Sy --noconfirm --needed \
     noto-fonts-emoji \
     nwg-displays \
     pipewire \
+    pipewire-pulse \
     polkit-gnome \
+    rtkit \
+    sof-firmware \
     qt5-wayland \
     qt6-wayland \
     remmina \
