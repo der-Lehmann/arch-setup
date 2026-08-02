@@ -5,6 +5,12 @@ set -e
 DIRECTORY="$HOME/.local/share/arch-setup"
 export DIRECTORY
 
+# Mirror all output to a log file while still printing to the terminal
+LOG_FILE="$DIRECTORY/install-$(date +%Y%m%d-%H%M%S).log"
+mkdir -p "$(dirname "$LOG_FILE")"
+exec > >(tee -a "$LOG_FILE") 2>&1
+echo "Logging install output to $LOG_FILE"
+
 sudo -v
 
 sudo pacman -Syu --noconfirm
