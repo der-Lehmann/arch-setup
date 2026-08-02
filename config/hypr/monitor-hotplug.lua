@@ -29,9 +29,29 @@ local function external_connected()
     return false
 end
 
+-- The nwg-displays profile (monitors.lua) is machine-generated, so its shape
+-- is predictable. Returns true when it disables the internal screen.
+local function profile_disables_internal()
+    local f = io.open(os.getenv("HOME") .. "/.config/hypr/monitors.lua")
+    if not f then
+        return false
+    end
+    local content = f:read("*a")
+    f:close()
+    for block in content:gmatch("hl%.monitor%s*(%b())") do
+        if block:find('output%s*=%s*"eDP') and block:find("disabled%s*=%s*true") then
+            return true
+        end
+    end
+    return false
+end
+
 -- Load-time override: with no external screen attached, the nwg-displays
 -- "eDP-1 disabled" rule would leave us without any display.
-if not external_connected() then
+-- Only override in that case — an unconditional rule here would clobber the
+-- profile's mode/position/scale for the internal screen (a later rule for the
+-- same output fully replaces the earlier one).
+if not external_connected() and profile_disables_internal() then
     hl.monitor({
         output = INTERNAL,
         mode = "preferred",
