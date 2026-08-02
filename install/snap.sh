@@ -10,19 +10,17 @@ makepkg -s --noconfirm
 sudo pacman -U --noconfirm *.pkg.tar.zst
 
 sudo systemctl enable --now snapd.socket
-
+sudo systemctl enable --now snapd.service
 sudo systemctl enable --now snapd.apparmor.service
 
 sudo ln -sf /var/lib/snapd/snap /snap
 
 # Wait for snapd to finish initial seeding before installing snaps
 echo "Waiting for snapd to be ready..."
-for i in {1..30}; do
-  if snap list >/dev/null 2>&1; then
-    break
-  fi
-  sleep 2
-done
+if ! timeout 120 snap wait system seed.loaded; then
+  echo "snapd failed to become ready (seed.loaded)" >&2
+  exit 1
+fi
 
 cd /
 rm -rf "$TMPDIR"
