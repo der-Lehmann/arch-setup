@@ -1,7 +1,6 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Binds/
 
 local terminal = "uwsm app -- alacritty"
--- Instant when walker --gapplication-service is running (see autostart.lua)
 local menu = "walker"
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
@@ -37,6 +36,10 @@ hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "l" }))
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "r" }))
 hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "u" }))
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "d" }))
+
+-- Move current workspace left/right across monitors
+hl.bind(mainMod .. " + ALT + H", hl.dsp.workspace.move({ monitor = "-1" }))
+hl.bind(mainMod .. " + ALT + L", hl.dsp.workspace.move({ monitor = "+1" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
